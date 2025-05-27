@@ -7,17 +7,6 @@ body {
     margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    gap: 30px;
-}
-
-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
     url('../images/HoustonCOTHas.jpg');
@@ -63,13 +52,18 @@ header a {
 }
 
 
+.footer-container {
+     max-width: 1400px;
+    margin: 0 auto;
+}
+
+
 footer {
     color: #ffffff;
     background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../images/JC-COTH-background.jpg');
     font-family: sans-serif;
-    max-width: 1400px;
-    margin: 0 auto;
+   
     background-repeat: no-repeat;
     background-size: auto;
     background-position: bottom right;
@@ -104,13 +98,22 @@ footer p {
 
 }
 
-.project-info {
-    margin: 0;
-    text-align: center;
-    font-size: 13px;
-    
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 30px;
 }
- 
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.more-about {
+    justify-self: start;
+}
+
 ul {
     list-style-type: none;
     display: block;
@@ -123,9 +126,56 @@ li {
     
 }
 
-.more-about {
-    justify-self: start;
+.icons a {
+    text-decoration: none;
+    margin-top: 20px;
+
 }
+
+.icons {
+    
+    display: flex;
+    gap: 10px;
+    
+}
+
+.project-info {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    
+}
+
+
+@media (max-width: 1250px) {
+    
+    footer {
+        padding: 25px;
+    }
+    
+    .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px;
+    
+   }
+
+   .more-about {
+  grid-column: 1;
+  grid-row: 1;
+   }
+
+   .icons {
+  grid-column: 1;
+  grid-row: 2;
+   }
+
+   .about-me {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+   }
+}
+
 
 @media (max-width: 750px) {
     header {
@@ -138,19 +188,89 @@ li {
     }
 
     header h2 {
-        font-size: 10px;
+        font-size: 11px;
     }
-}
 
-.icons a {
-    text-decoration: none;
+   header a {
+    font-size: 7px;
+    padding: 8px 16px;
+    margin-top: 16px;
+    }
+
+    footer {
+        padding: 25px;
+    }
+
+   footer h3 {
+    font-size: 18px;
+   }
+
+   footer p, a {
+    font-size: 12px;
+    line-height: 20px;
+   }
+
+   .project-info {
+    font-size: 12px;
+   
+   }
+
+   li {
+    margin-bottom: 0;
+   }
+
+   .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 5px;
     
-     margin-top: 20px;
+   }
 
+   .more-about {
+  grid-column: 1;
+  grid-row: 1;
+   }
+
+   .icons {
+  grid-column: 1;
+  grid-row: 2;
+   }
+
+   .about-me {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+   }
 }
 
-.icons {
+@media (max-width: 699px) {
+    footer {
+        background-size: cover;
+    }
+
+    .about-me{
+       display: none;
+    }
+
     
-    display: flex;
-    gap: 10px;
 }
+
+@media (max-width: 400px) {
+    footer {
+        background-image: none;
+        background-color: #0d0909;
+        padding: 15px 12px;
+
+    }
+    section.grid {
+        grid-template-columns: 1fr;
+        
+    }
+    .about-web {
+        display: none;
+    }
+    
+}
+
+
+
+
