@@ -845,13 +845,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.grid-3-columns, 
-.grid-2-columns, 
-section, 
-.card, 
-.container {
-  max-width: 100%;
-}
+
 
 .card {
   margin: 10px auto;
