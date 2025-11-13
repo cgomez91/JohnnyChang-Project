@@ -109,6 +109,7 @@ section {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 100px;
+  padding-bottom: 50px;
 }
 
 section.secondary {
@@ -257,11 +258,7 @@ footer p {
 }
 
 
-@media (max-width: 1314px) {
-  .column-2 a.btn {
-  
-}
-}
+
 
 
 @media (max-width: 1280px) {
@@ -925,8 +922,9 @@ img {
 @media (min-width: 1025px) {
   .grid-3-columns {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px;
+    gap: 15px;
     padding: 0;
+    margin-top: 30px;
   }
 
   .card {
@@ -936,6 +934,10 @@ img {
   .card .card-header img {
     height: 230px;
     object-fit: cover;
+  }
+
+  iframe {
+    aspect-ratio: 1/1;
   }
 }
 
@@ -976,8 +978,5 @@ html, body { overflow-x: hidden; }
 
   
 }
-
-
-
 
 
